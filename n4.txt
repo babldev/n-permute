@@ -1,0 +1,25 @@
+Enter word size (Max 9): 4
+p1       1234    4: |...<|   3: |..<|   2: |.<|   
+p2       1243    4: |..<.|   3: |..<|   2: |.<|   	Shifted 4 left. 	Swapped (4, 3).	Offset: 0
+p3       1423    4: |.<..|   3: |..<|   2: |.<|   	Shifted 4 left. 	Swapped (3, 2).	Offset: 0
+p4       4123    4: |<...|   3: |..<|   2: |.<|   	Shifted 4 left. 	Swapped (2, 1).	Offset: 0
+p5       4132    4: |>...|   3: |.<.|   2: |.<|   	Shifted 3 left. 	Swapped (4, 3).	Offset: 1
+p6       1432    4: |.>..|   3: |.<.|   2: |.<|   	Shifted 4 right. 	Swapped (1, 2).	Offset: 0
+p7       1342    4: |..>.|   3: |.<.|   2: |.<|   	Shifted 4 right. 	Swapped (2, 3).	Offset: 0
+p8       1324    4: |...>|   3: |.<.|   2: |.<|   	Shifted 4 right. 	Swapped (3, 4).	Offset: 0
+p9       3124    4: |...<|   3: |<..|   2: |.<|   	Shifted 3 left. 	Swapped (2, 1).	Offset: 0
+p10      3142    4: |..<.|   3: |<..|   2: |.<|   	Shifted 4 left. 	Swapped (4, 3).	Offset: 0
+p11      3412    4: |.<..|   3: |<..|   2: |.<|   	Shifted 4 left. 	Swapped (3, 2).	Offset: 0
+p12      4312    4: |<...|   3: |<..|   2: |.<|   	Shifted 4 left. 	Swapped (2, 1).	Offset: 0
+p13      4321    4: |>...|   3: |>..|   2: |<.|   	Shifted 2 left. 	Swapped (4, 3).	Offset: 2
+p14      3421    4: |.>..|   3: |>..|   2: |<.|   	Shifted 4 right. 	Swapped (1, 2).	Offset: 0
+p15      3241    4: |..>.|   3: |>..|   2: |<.|   	Shifted 4 right. 	Swapped (2, 3).	Offset: 0
+p16      3214    4: |...>|   3: |>..|   2: |<.|   	Shifted 4 right. 	Swapped (3, 4).	Offset: 0
+p17      2314    4: |...<|   3: |.>.|   2: |<.|   	Shifted 3 right. 	Swapped (1, 2).	Offset: 0
+p18      2341    4: |..<.|   3: |.>.|   2: |<.|   	Shifted 4 left. 	Swapped (4, 3).	Offset: 0
+p19      2431    4: |.<..|   3: |.>.|   2: |<.|   	Shifted 4 left. 	Swapped (3, 2).	Offset: 0
+p20      4231    4: |<...|   3: |.>.|   2: |<.|   	Shifted 4 left. 	Swapped (2, 1).	Offset: 0
+p21      4213    4: |>...|   3: |..>|   2: |<.|   	Shifted 3 right. 	Swapped (3, 4).	Offset: 1
+p22      2413    4: |.>..|   3: |..>|   2: |<.|   	Shifted 4 right. 	Swapped (1, 2).	Offset: 0
+p23      2143    4: |..>.|   3: |..>|   2: |<.|   	Shifted 4 right. 	Swapped (2, 3).	Offset: 0
+p24      2134    4: |...>|   3: |..>|   2: |<.|   	Shifted 4 right. 	Swapped (3, 4).	Offset: 0
