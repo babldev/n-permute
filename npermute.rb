@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-# N-Permutation using only swaps. 
+# N-Permutation using only swaps.
 # by Brady Law 2011
 
 # Simple swapping of elements in an array given the indicies.
@@ -15,19 +15,19 @@ end
 
 class NPermute
   attr_accessor :word, :size
-  
+
   def initialize(size)
     @size = size
     @word = (1..@size).to_a
-    
+
     @positions = (0...@size).to_a
     @directions = [-1] * @size
   end
-  
+
   def iterate
     # First return the original word.
     yield @word.join, debug_str
-    
+
     # Now,  the swap based off the book's algorithm.
     # Step 1: Find the optimal 'mobile' value. We are looking for the
     # maximum integer m such that @direction[m] is a valid movement
@@ -41,20 +41,20 @@ class NPermute
           break
         end
       end
-      
+
       break if element == nil  # If we can't move anything, we're done!
-      
+
       offset = buffer(element)
       pos = @positions[element] + offset
       # Step 2: Make the swap, update the @positions data.
       word.swap(pos, pos + @directions[element])
       @positions[element] += @directions[element]
-  
+
       # Step 3: Reverse the @directions for any integer p where p > move_pos.
       for i in (element + 1)...@size
         @directions[i] *= -1
       end
-  
+
       yield @word.join,
         debug_str(:offset => offset,
         :element => element,
@@ -62,7 +62,7 @@ class NPermute
         :direction => @directions[element])
     end
   end
-  
+
   def buffer(elem)
     buffer = 0
     for i in (elem+1)...@size
@@ -70,22 +70,22 @@ class NPermute
     end
     buffer
   end
-  
+
   # Generates a debug string including the movements of each integer.
   def debug_str(data=nil)
-    output = ''
+    output = ""
     (1...@size).reverse_each do |i|
       output += (i + 1).to_s + ": |" + ("." * @positions[i])
       output += @directions[i] == 1 ? ">" : "<"
       output += ("." * (i - @positions[i])) + "|   "
     end
-    
+
     if data
       output += "\tShifted #{(data[:element] + 1).to_s} #{data[:direction] == 1 ? "right" : "left"}. "
-      output += "\tSwapped (#{data[:real_pos]}, #{data[:real_pos] + data[:direction]})." 
+      output += "\tSwapped (#{data[:real_pos]}, #{data[:real_pos] + data[:direction]})."
       output += "\tOffset: #{data[:offset]}"
     end
-  
+
     output
   end
 end
@@ -93,7 +93,7 @@ end
 
 
 # Example code:
-print 'Enter word size (Max 9): '
+print "Enter word size (Max 9): "
 count = gets.chomp.to_i
 permuter = NPermute.new(count)
 
